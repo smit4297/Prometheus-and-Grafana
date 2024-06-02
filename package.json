@@ -1,17 +1,24 @@
 {
   "name": "prometheus-and-grafana",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Node.js application with Prometheus metrics and Grafana dashboards",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc -b",
-    "start": "npm run build && node dist/index.js"
-},
-  "keywords": [],
-  "author": "",
+    "start": "npm run build && node dist/index.js",
+    "dev": "tsc -w & nodemon dist/index.js"
+  },
+  "keywords": ["nodejs", "express", "prometheus", "grafana", "monitoring"],
+  "author": "Your Name",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.19.2",
+    "prom-client": "^15.1.2"
+  },
+  "devDependencies": {
     "@types/express": "^4.17.21",
-    "express": "^4.19.2"
+    "@types/node": "^20.11.5",
+    "nodemon": "^3.0.3",
+    "typescript": "^5.3.3"
   }
 }
